@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/overlay_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backgroundImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/overlay_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/rounded_background"
+            android:padding="12dp"
+            android:gravity="center">
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:00 PM"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="24sp"/>
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mon, Oct 23"
+            android:textColor="#CCCCCC"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/speedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 km/h"
+            android:textColor="#00FF00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"/>
+
+        <LinearLayout
+            android:id="@+id/weatherContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp">
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_report_image"
+                android:contentDescription="Weather icon" />
+
+            <TextView
+                android:id="@+id/tempText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--°C"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

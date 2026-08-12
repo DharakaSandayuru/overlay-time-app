@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="speed_format">%1$d km/h</string>
+</resources>
